@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFChess", "WCFChess\WCFChess.csproj", "{42B6E89A-3678-4634-AC89-289BEEC08EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFChessServiceLib", "WCFChessServiceLib\WCFChessServiceLib.csproj", "{EC83F3D3-4BE8-4949-8126-FE954F89C5EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFChessServiceHost", "WCFChessServiceHost\WCFChessServiceHost.csproj", "{08210C56-11F2-48BF-BCB3-F514553E1132}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42B6E89A-3678-4634-AC89-289BEEC08EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B6E89A-3678-4634-AC89-289BEEC08EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B6E89A-3678-4634-AC89-289BEEC08EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B6E89A-3678-4634-AC89-289BEEC08EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC83F3D3-4BE8-4949-8126-FE954F89C5EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC83F3D3-4BE8-4949-8126-FE954F89C5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC83F3D3-4BE8-4949-8126-FE954F89C5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC83F3D3-4BE8-4949-8126-FE954F89C5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08210C56-11F2-48BF-BCB3-F514553E1132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08210C56-11F2-48BF-BCB3-F514553E1132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08210C56-11F2-48BF-BCB3-F514553E1132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08210C56-11F2-48BF-BCB3-F514553E1132}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

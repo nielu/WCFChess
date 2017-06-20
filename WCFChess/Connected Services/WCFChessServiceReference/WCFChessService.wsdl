@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="WCFChessService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="WCFChessService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="WCFChessService/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/WCFChessService?xsd=xsd0" namespace="WCFChessService" />
+      <xsd:import schemaLocation="http://localhost:8080/WCFChessService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/WCFChessService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFChessService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="WCFChessServiceLib_GetGameSessions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameSessions" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_GetGameSessions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameSessionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_CreateGameSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGameSession" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_CreateGameSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGameSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_JoinGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:JoinGame" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_JoinGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JoinGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_PerformGameTurn_InputMessage">
+    <wsdl:part name="parameters" element="tns:PerformGameTurn" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_PerformGameTurn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PerformGameTurnResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_LeaveGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveGame" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_LeaveGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_GetCurrentPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentPlayer" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_GetCurrentPlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_NotifyUserJoinedGame_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUserJoinedGame" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_NotifyUserLeftGame_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUserLeftGame" />
+  </wsdl:message>
+  <wsdl:message name="WCFChessServiceLib_NotifyUserOfGameTurn_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUserOfGameTurn" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="WCFChessServiceLib">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetGameSessions">
+      <wsdl:input wsaw:Action="WCFChessService/WCFChessServiceLib/GetGameSessions" message="tns:WCFChessServiceLib_GetGameSessions_InputMessage" />
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/GetGameSessionsResponse" message="tns:WCFChessServiceLib_GetGameSessions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="CreateGameSession">
+      <wsdl:input wsaw:Action="WCFChessService/WCFChessServiceLib/CreateGameSession" message="tns:WCFChessServiceLib_CreateGameSession_InputMessage" />
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/CreateGameSessionResponse" message="tns:WCFChessServiceLib_CreateGameSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="JoinGame">
+      <wsdl:input wsaw:Action="WCFChessService/WCFChessServiceLib/JoinGame" message="tns:WCFChessServiceLib_JoinGame_InputMessage" />
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/JoinGameResponse" message="tns:WCFChessServiceLib_JoinGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="PerformGameTurn">
+      <wsdl:input wsaw:Action="WCFChessService/WCFChessServiceLib/PerformGameTurn" message="tns:WCFChessServiceLib_PerformGameTurn_InputMessage" />
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/PerformGameTurnResponse" message="tns:WCFChessServiceLib_PerformGameTurn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="LeaveGame">
+      <wsdl:input wsaw:Action="WCFChessService/WCFChessServiceLib/LeaveGame" message="tns:WCFChessServiceLib_LeaveGame_InputMessage" />
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/LeaveGameResponse" message="tns:WCFChessServiceLib_LeaveGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetCurrentPlayer">
+      <wsdl:input wsaw:Action="WCFChessService/WCFChessServiceLib/GetCurrentPlayer" message="tns:WCFChessServiceLib_GetCurrentPlayer_InputMessage" />
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/GetCurrentPlayerResponse" message="tns:WCFChessServiceLib_GetCurrentPlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NotifyUserJoinedGame">
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/NotifyUserJoinedGame" message="tns:WCFChessServiceLib_NotifyUserJoinedGame_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NotifyUserLeftGame">
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/NotifyUserLeftGame" message="tns:WCFChessServiceLib_NotifyUserLeftGame_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="NotifyUserOfGameTurn">
+      <wsdl:output wsaw:Action="WCFChessService/WCFChessServiceLib/NotifyUserOfGameTurn" message="tns:WCFChessServiceLib_NotifyUserOfGameTurn_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

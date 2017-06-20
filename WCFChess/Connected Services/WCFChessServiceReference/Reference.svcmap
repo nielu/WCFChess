@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4bfbf8b1-8541-469f-8635-538be8a6f408" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/WCFChessService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFChessService.wsdl" MetadataType="Wsdl" ID="3822367b-75b0-4b69-a7ff-cd7a16752d7c" SourceId="1" SourceUrl="http://localhost:8080/WCFChessService?wsdl=wsdl0" />
+    <MetadataFile FileName="WCFChessServiceLib.wsdl" MetadataType="Wsdl" ID="4bb6c1b4-c8cd-40f0-a63d-00e3d3eab20c" SourceId="1" SourceUrl="http://localhost:8080/WCFChessService?wsdl" />
+    <MetadataFile FileName="WCFChessService1.xsd" MetadataType="Schema" ID="072282ec-2c0f-462b-9150-f609d5ca912c" SourceId="1" SourceUrl="http://localhost:8080/WCFChessService?xsd=xsd2" />
+    <MetadataFile FileName="WCFChessService2.xsd" MetadataType="Schema" ID="6245b08d-235a-4cfa-a24b-122c98129e38" SourceId="1" SourceUrl="http://localhost:8080/WCFChessService?xsd=xsd1" />
+    <MetadataFile FileName="WCFChessService3.xsd" MetadataType="Schema" ID="f72bbdf2-5f74-4537-ac7e-c1f49f2533c4" SourceId="1" SourceUrl="http://localhost:8080/WCFChessService?xsd=xsd0" />
+    <MetadataFile FileName="WCFChessService.disco" MetadataType="Disco" ID="6a15a9eb-a953-498c-b1c7-afa318068c05" SourceId="1" SourceUrl="http://localhost:8080/WCFChessService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
