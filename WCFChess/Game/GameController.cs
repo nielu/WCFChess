@@ -81,7 +81,8 @@ namespace WCFChess
         public void GameTick(ChessPanel selectedPanel)
         {
             var figure =  selectedPanel.Figure;
-            CurrentPlayer = _wcf.CurrentPlayer;
+            if (gameType != GameTypeEnum.Local)
+                CurrentPlayer = _wcf.CurrentPlayer;
             if (gameType != GameTypeEnum.Local && CurrentPlayer == Enemy) return;
             switch (GameState)
             {

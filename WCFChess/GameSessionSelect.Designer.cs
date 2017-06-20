@@ -43,23 +43,25 @@
             // avaliableSessionsView
             // 
             this.avaliableSessionsView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.username_column,
-            this.guid_column});
+            this.guid_column,
+            this.username_column});
             this.avaliableSessionsView.Location = new System.Drawing.Point(12, 34);
             this.avaliableSessionsView.MultiSelect = false;
             this.avaliableSessionsView.Name = "avaliableSessionsView";
             this.avaliableSessionsView.Size = new System.Drawing.Size(270, 186);
             this.avaliableSessionsView.TabIndex = 0;
             this.avaliableSessionsView.UseCompatibleStateImageBehavior = false;
-            this.avaliableSessionsView.View = System.Windows.Forms.View.List;
+            this.avaliableSessionsView.View = System.Windows.Forms.View.Details;
             // 
             // username_column
             // 
             this.username_column.Text = "Player name";
+            this.username_column.Width = 126;
             // 
             // guid_column
             // 
             this.guid_column.Text = "GUID";
+            this.guid_column.Width = 141;
             // 
             // connectButton
             // 
@@ -115,7 +117,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 9);
+            this.label2.Location = new System.Drawing.Point(253, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 6;

@@ -133,7 +133,7 @@ namespace WCFChess
             return;
         }
 
-        public GameSession[] GetAvailableSesion()
+        public GameSession[] GetAvailableSession()
         {
             return _client.GetGameSessions();
         }

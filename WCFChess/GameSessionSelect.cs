@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 using WCFChessService;
 namespace WCFChess
@@ -21,7 +22,7 @@ namespace WCFChess
                 _wcf.Connect();
             }
 
-            var s = _wcf.GetAvailableSesion();
+            var s = _wcf.GetAvailableSession();
             foreach (var session in s)
             {
                 var listItem = new ListViewItem(session.SessionID.ToString());
@@ -40,15 +41,18 @@ namespace WCFChess
         {
             var gameWindow = new MainWindow();
             gameWindow.Show();
+
+            this.Hide();
         }
 
         private void hostButton_Click(object sender, EventArgs e)
         {
-            var retVal = _wcf.HostGame();
-            if (retVal)
+            if (_wcf.HostGame())
             {
                 var gameWindow = new MainWindow(nickTextBox.Text, _wcf.SessionGUID, GameTypeEnum.Remote_host, _wcf);
                 gameWindow.Show();
+
+                this.Hide();
             }
             else
                 MessageBox.Show("Failed to host new game session!");
@@ -67,9 +71,11 @@ namespace WCFChess
             {
                 var gamewindow = new MainWindow(nickTextBox.Text, guid, GameTypeEnum.Remote_client, _wcf);
                 gamewindow.Show();
+
+                this.Hide();
             }
             else
-                Console.WriteLine("Unable to joing game!");
+                Console.WriteLine("Unable to join game!");
         }
     }
 }
